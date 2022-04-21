@@ -5,20 +5,20 @@ myName.innerHTML = `${Name}!`;
 
 function sayac() {
   let date = new Date().toLocaleTimeString();
+  let gun = new Date();
+  let days = [
+    "PAZAR",
+    "PAZARTESİ",
+    "SALI",
+    "ÇARŞAMBA",
+    "PERŞEMBE",
+    "CUMA",
+    "CUMARTESİ",
+  ];
 
-  document.querySelector("#girissaati").innerHTML = date;
+  document.querySelector("#girissaati").innerHTML = `${date} ${
+    days[gun.getDay()]
+  }`;
 }
 
 setInterval(sayac, 1000);
-
-let gun = new Date();
-let days = [
-  "PAZAR",
-  "PAZARTESİ",
-  "SALI",
-  "ÇARŞAMBA",
-  "PERŞEMBE",
-  "CUMA",
-  "CUMARTESİ",
-];
-document.querySelector("#girisgunu").innerHTML = days[gun.getDay()];
