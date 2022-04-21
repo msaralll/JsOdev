@@ -4,7 +4,8 @@ let myName = document.querySelector("#isim");
 myName.innerHTML = `${Name}!`;
 
 function sayac() {
-  let date = new Date().toLocaleString();
+  let date = new Date().toLocaleTimeString();
+
   document.querySelector("#girissaati").innerHTML = date;
 }
 
